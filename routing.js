@@ -17,10 +17,10 @@ AdminLayoutController=RouteController.extend({
 });
 
 RootController=DefaultLayoutController.extend({
-	template: 'ImpactUnderConstruction'
+	template: 'ImpactLandingPage'
 });
 
-AdminIndexController=AdminLayoutController.extend({
+AdminDefaultController=AdminLayoutController.extend({
 	template: 'ImpactUnderConstruction'
 });
 
@@ -36,5 +36,5 @@ Router.route('/', {
 
 Router.route('/admin', {
 	name: 'admin',
-	controller: AdminIndexController
+	controller: AdminDefaultController
 });

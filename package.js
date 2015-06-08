@@ -13,7 +13,8 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
   api.use('less');
-  api.use('nemo64:bootstrap');
+  api.use('underscore');
+  api.use('jquery');
   api.use('iron:core');
   api.use('iron:layout');
   api.use('iron:url');
@@ -23,14 +24,16 @@ Package.onUse(function(api) {
   api.use('iron:router');
   api.use('iron:controller');
   api.use('templating', 'client');
+  api.use('accounts-password');
+  api.use('useraccounts:bootstrap');
   
+  api.addFiles('stylesheets/vars.import.less');
+  api.addFiles('stylesheets/mixins.import.less');
   api.addFiles('stylesheets/style.less');
-  api.addFiles('stylesheets/vendor/custom.bootstrap.mixins.import.less');
-  api.addFiles('stylesheets/vendor/custom.bootstrap.import.less');
-  api.addFiles('stylesheets/typo.import.less');
 
   api.addFiles('templates.html');
-  api.addFiles('underConstruction.html');
+  api.addFiles('impactUnderConstruction.html');
+  api.addFiles('impactLandingPage.html');
 
   api.addFiles('routing.js');
 });
