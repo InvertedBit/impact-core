@@ -12,7 +12,27 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
-  api.addFiles('impact-core.js');
+  api.use('less');
+  api.use('nemo64:bootstrap');
+  api.use('iron:core');
+  api.use('iron:layout');
+  api.use('iron:url');
+  api.use('iron:dynamic-template');
+  api.use('iron:location');
+  api.use('iron:middleware-stack');
+  api.use('iron:router');
+  api.use('iron:controller');
+  api.use('templating', 'client');
+  
+  api.addFiles('stylesheets/style.less');
+  api.addFiles('stylesheets/vendor/custom.bootstrap.mixins.import.less');
+  api.addFiles('stylesheets/vendor/custom.bootstrap.import.less');
+  api.addFiles('stylesheets/typo.import.less');
+
+  api.addFiles('templates.html');
+  api.addFiles('underConstruction.html');
+
+  api.addFiles('routing.js');
 });
 
 Package.onTest(function(api) {
